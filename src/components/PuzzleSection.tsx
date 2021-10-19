@@ -8,15 +8,12 @@ let noDupes: Array<string> = [];
 
 function curate(): void {
 
-    object1.forEach(element => {
-        object2.forEach(element2 => {
-            if (element2 === element) {
-                object2.splice(object2.indexOf(element2), 1)
-            }
-        });
-    });
-    
-    noDupes = [...object1, ...object2];
+    [...object1, ...object2].map((item, index) => (
+        !noDupes.includes(item) ? 
+            noDupes.push(item) : null
+        )
+    )
+    console.log(noDupes);
 }
 
 const ResultList: React.FC = () => {
@@ -40,7 +37,6 @@ const PuzzleSection: React.FC = () => {
             <p>Lorem ipsum dolor sit <button onClick={curate}>amet,</button> consectetur adipiscing elit. Nulla ultricies, orci sed ullamcorper molestie, elit est bibendum risus, sit amet mollis tellus massa ut augue. Proin vehicula tempus dolor, nec mollis nibh. Quisque gravida condimentum nulla quis dictum. Cras blandit purus leo, eget gravida arcu hendrerit ac. Vivamus tempus commodo urna vel pharetra. Ut blandit, nunc et sagittis tempus, justo leo egestas neque, eu sagittis purus arcu eget tortor.</p>
             {
                 noDupes.length > 0 ? <ResultList></ResultList> : null
-                
             }
         </div>
     );

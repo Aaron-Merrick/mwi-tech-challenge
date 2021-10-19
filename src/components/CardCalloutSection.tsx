@@ -14,7 +14,7 @@ interface cardData {
     description: string
 }
 
-let cardData: cardData[] = [
+let cd: cardData[] = [
     {
         path: talkie,
         alt: "Microphone",
@@ -38,7 +38,7 @@ let cardData: cardData[] = [
 const CardCalloutSection: React.FC = () => {
     return (
         <div className="ccs-container">
-            {cardData.map((item, index) => (
+            {cd.map((item, index) => (
                 <CardCallout
                     path={item.path}
                     alt={item.alt}

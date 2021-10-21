@@ -9,12 +9,24 @@
   font-family: 'Poppins', sans-serif;
 }
 
+BODY { font-size: 62.5% }
+
 .mwi-background {
   background-color: var(--mwi-dark-gray);
+  width: 100%;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .mwi-container {
   width: 90%;
   margin: 0 auto;
+}
+
+h1 {
+  font-size: 4.8em;
+}
+
+h2 {
+  font-size: 3.6em;
 }

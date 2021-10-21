@@ -18,19 +18,19 @@ let cd: cardData[] = [
     {
         path: talkie,
         alt: "Microphone",
-        heading:"Heading 2",
+        heading:"Heading Two",
         description: "Lorem Ipsum",
     },
     {
         path: rabbit,
         alt: "Microphone",
-        heading:"Heading 2",
+        heading:"Heading Two",
         description: "Lorem Ipsum",
     },
     {
         path: shield,
         alt: "Microphone",
-        heading:"Heading 2",
+        heading:"Heading Two",
         description: "Lorem Ipsum",
     },
 ];

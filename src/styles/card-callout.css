@@ -1,6 +1,6 @@
 .card-callout {
     background-color: white;
-    border-radius: 2%;
+    border-radius: 3px;
 
     display: flex;
     flex-direction: column;
@@ -26,6 +26,10 @@
     width: 100%;
 }
 
+.card-text-container > p {
+    font-size: 1.4em;
+}
+
 .card-button {
     background-color: var(--mwi-gold);
     color: white;
@@ -34,5 +38,5 @@
     padding: 12px 25px;
 
     font-family: 'Poppins', sans-serif;
-    font-size: .8em;
+    font-size: 1.4em;
 }

@@ -4,13 +4,11 @@
 }
 
 .gilded {
-    /* text-decoration: underline; */
-    /* text-decoration-color: var(--mwi-gold); */
-
     border-bottom: 5px solid var(--mwi-gold);
     line-height: 10px;
 }
 
 .puzzle-section > p {
     color: white;
+    font-size: 1.6em;
 }

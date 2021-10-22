@@ -4,3 +4,15 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@media (max-width: 1080px) {
+    .ccs-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1080px) {
+    .ccs-container {
+        flex-direction: column;
+    }
+}

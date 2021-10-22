@@ -4,8 +4,7 @@
 }
 
 .gilded {
-    border-bottom: 5px solid var(--mwi-gold);
-    line-height: 10px;
+    border-bottom: 4px solid var(--mwi-gold);
 }
 
 .puzzle-section > p {

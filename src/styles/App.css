@@ -11,9 +11,13 @@
 
 BODY { font-size: 62.5% }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .mwi-background {
   background-color: var(--mwi-dark-gray);
-  width: 100%;
+  background-size: cover;
   min-height: 100vh;
   overflow: hidden;
 }

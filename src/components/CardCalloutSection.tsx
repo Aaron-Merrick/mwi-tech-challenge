@@ -40,6 +40,7 @@ const CardCalloutSection: React.FC = () => {
         <div className="ccs-container">
             {cd.map((item, index) => (
                 <CardCallout
+                    key={index}
                     path={item.path}
                     alt={item.alt}
                     heading={item.heading}

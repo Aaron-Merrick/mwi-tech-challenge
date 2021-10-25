@@ -32,7 +32,7 @@
     padding-bottom: 1.5em;
 }
 
-.card-button {
+.fill-button {
     background-color: var(--mwi-gold);
     color: white;
     border: none;
@@ -43,17 +43,38 @@
     font-size: 1.4em;
 }
 
-@media (max-width: 1080px) {
+.fill-button:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
     .card-callout {
     background-color: white;
     border-radius: 3px;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
     max-width: calc(50% - 8em);
 
     margin: 1.5em;
+    padding: 2.5em;
+
+    /* fix this later */
+    min-height: 30em;
+    }
+}
+
+@media (max-width: 800px) {
+    .card-callout {
+    background-color: white;
+    border-radius: 3px;
+
+    display: flex;
+    align-items: center;
+    max-width: 90%;
+    width: 100%;
+
+    margin: 1.5em auto;
     padding: 2.5em;
 
     /* fix this later */

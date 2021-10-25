@@ -19,7 +19,7 @@ const CardCallout: React.FC<CardProps> = ({path, alt, heading, description}: Car
                 <h2>{heading}</h2>
                 <p>{description}</p>
             </div>
-            <button className="card-button">Learn More</button>
+            <button className="fill-button">Learn More</button>
         </div>
     );
 };

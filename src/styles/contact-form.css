@@ -1,0 +1,45 @@
+.contact-form {
+    flex: 1 1 0;
+    margin: auto 0;
+    margin-left: 10vw;
+}
+
+.form-content {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.form-row {
+    flex: 1 1 0;
+    width: 100%;
+    display: flex;
+    gap: 2.5em;
+}
+
+.row-item {
+    flex: 1 1 0;
+    padding: 1em;
+    color: var(--mwi-mid-gray);
+    background-color: var(--mwi-light-gray);
+    border: none;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+input:required {
+    border: red;
+}
+
+input:invalid:required {
+    border: red;
+}
+
+#message-box {
+    display: block;
+    min-height: 13.5em;
+    resize: none;
+}

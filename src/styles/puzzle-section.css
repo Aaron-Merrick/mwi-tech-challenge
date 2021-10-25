@@ -1,4 +1,4 @@
-.puzzle-section > h1 {
+h1 {
     color: white;
     text-align: left;
 }
@@ -7,11 +7,25 @@
     border-bottom: 4px solid var(--mwi-gold);
 }
 
-.puzzle-section > p {
+p {
     color: white;
     font-size: 1.6em;
 }
 
+.puzzle-button {
+    background: transparent;
+    color: var(--mwi-gold);
+    border: none;
+    font-size: 1em;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.puzzle-button:hover {
+    cursor: pointer;
+}
+
 #result-list {
     color: white;
+    font-size: 1.2em;
 }

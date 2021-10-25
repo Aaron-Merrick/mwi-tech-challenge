@@ -1,17 +1,18 @@
 .ccs-container {
+    margin: 5em 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
     .ccs-container {
         justify-content: center;
     }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 800px) {
     .ccs-container {
         flex-direction: column;
     }

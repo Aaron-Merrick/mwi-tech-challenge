@@ -1,5 +1,6 @@
 import * as React from 'react';
 import CardCallout from '../components/CardCallout';
+import { textApi } from '../http'
 
 import talkie from '../assets/img/talkie.png';
 import rabbit from '../assets/img/rabbit.png';
@@ -14,31 +15,52 @@ interface cardData {
     description: string
 }
 
-let cd: cardData[] = [
-    {
-        path: talkie,
-        alt: "Microphone",
-        heading:"Heading Two",
-        description: "Lorem Ipsum",
-    },
-    {
-        path: rabbit,
-        alt: "Microphone",
-        heading:"Heading Two",
-        description: "Lorem Ipsum",
-    },
-    {
-        path: shield,
-        alt: "Microphone",
-        heading:"Heading Two",
-        description: "Lorem Ipsum",
-    },
-];
+let cd: cardData[];
+
+interface apiData {
+    title: string,
+    content: string
+}
+
+let cardText: apiData[];
 
 const CardCalloutSection: React.FC = () => {
+
+    const [cardContent, setCardContent] = React.useState(cd);
+
+    React.useEffect (() => {
+        textApi.get('/text-content')
+        .then(res => {
+            cardText = [...res.data];
+            setCardContent([
+                {
+                    path: talkie,
+                    alt: "Microphone",
+                    heading: cardText[1].title,
+                    description: cardText[1].content,
+                },
+                {
+                    path: rabbit,
+                    alt: "Rabbit",
+                    heading: cardText[2].title,
+                    description: cardText[2].content,
+                },
+                {
+                    path: shield,
+                    alt: "Shield",
+                    heading: cardText[2].title,
+                    description: cardText[2].content,
+                },
+            ])       
+        }).catch((err) => {
+            console.log(err);
+        })
+    }, []);
+    
     return (
         <div className="ccs-container">
-            {cd.map((item, index) => (
+        { cardContent === undefined ? null :
+            cardContent.map((item, index) => (
                 <CardCallout
                     key={index}
                     path={item.path}
@@ -46,7 +68,8 @@ const CardCalloutSection: React.FC = () => {
                     heading={item.heading}
                     description={item.description}
                 ></CardCallout>
-            ))}
+            ))
+        }
         </div>
     );
 };

@@ -3,6 +3,8 @@
 use App\Models\FormResults;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormResultsApiController;
+use App\Http\Controllers\TextContentApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,30 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/form-results', [FormResultsApiController::class, 'index']);
 
+Route::post('/form-results', [FormResultsApiController::class, 'storeResults']);
 
-Route::get('/form-results', function() {
-    return FormResults::all();
-});
-
-Route::post('/form-results', function() {
-
-    request()->validate([
-        'email' => 'required'
-    ]);
-
-    var_dump(request()->all());
-
-    die();
-
-    return FormResults::create([
-        'first_name' => request('first_name'),
-        'last_name' => request('last_name'),
-        'title' => request('title'),
-        'email' => request('email'),
-        'message' => request('message')
-    ]);
-});
+Route::get('/text-content', [TextContentApiController::class, 'text']);

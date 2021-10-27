@@ -1,4 +1,4 @@
-GET http://localhost:8000/api/form-results HTTP/1.1
+GET http://localhost:8000/api/text-content HTTP/1.1
 
 ###
 

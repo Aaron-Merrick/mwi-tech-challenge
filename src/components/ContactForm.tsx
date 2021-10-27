@@ -11,7 +11,7 @@ const ContactForm: React.FC = () => {
 
     return (
         <div className="contact-form">
-            <h2>Heading Two</h2>
+            <h2 id="contact-heading">Heading Two</h2>
             <form className="form-content">
                 <div className="form-row">
                     <input className="row-item" type="text" placeholder="First Name" />

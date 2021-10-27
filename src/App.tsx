@@ -14,20 +14,31 @@ import './styles/App.css';
 const App: React.FC = () => {
   return (
     <Router>
-      <div id="mwi-background" className="App">
+      <div className="App">
         <div className="mwi-container">
-          <MwiHeader></MwiHeader>
           <Switch>
             <Route exact path="/">
-              <div className="mwi-container">
-                <CardCalloutSection></CardCalloutSection>
-                <PuzzleSection></PuzzleSection>
+              <div className="black-background">
+                <div className="page-container">
+                  <MwiHeader></MwiHeader>
+                  <div className="page-content">
+                    <CardCalloutSection></CardCalloutSection>
+                    <PuzzleSection></PuzzleSection>
+                  </div>
+                </div>
               </div>
             </Route>
             <Route path="/contact">
-              <div id="contact-container" className="mwi-container">
-                <ContactText></ContactText>
-                <ContactForm></ContactForm>
+              <div className="contact-container">
+                <div className="black-background contact-content">
+                  <ContactText></ContactText>
+                </div>
+                <div className="white-background contact-content">
+                  <ContactForm></ContactForm>
+                </div>
+              </div>
+              <div className="page-container">
+                <MwiHeader></MwiHeader>
               </div>
             </Route>
           </Switch>

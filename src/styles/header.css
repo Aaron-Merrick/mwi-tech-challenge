@@ -1,9 +1,13 @@
 .mwi-header {
     display: flex;
+    width: 90%;
     justify-content: space-between;
     align-items: center;
   
-    padding: 3em 0;
+    padding: 5em 0;
+
+    position: absolute;
+    top: 0;
   }
   
   .contact-link {
@@ -14,4 +18,5 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.8em;
     font-weight: bold;
+    text-align: right;
   }

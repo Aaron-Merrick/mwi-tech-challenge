@@ -1,14 +1,19 @@
 .contact-form {
     flex: 1 1 0;
     margin: auto 0;
-    margin-left: 10vw;
+}
+
+#contact-heading {
+    width: 90%;
+    margin: 1em auto;
 }
 
 .form-content {
+    margin: auto auto;
+    width: 90%;
     display: flex;
     flex: 1 1 0;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 2em;
 }

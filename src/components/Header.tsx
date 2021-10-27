@@ -1,21 +1,14 @@
 import * as React from 'react';
 
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router';
 
 import logo from '../assets/img/logo.png';
 
 import '../styles/header.css';
 
 const MwiHeader: React.FC = () => {
-  const [location, setLocation] = React.useState('contact');
-
-  React.useEffect(() =>{
-    if (location === '/') {
-      document.getElementById("mwi-background")!.style.background = "linear-gradient(90deg, var(--mwi-dark-gray) 50%, white 50%)";
-    } else {
-      document.getElementById("mwi-background")!.style.background = "var(--mwi-dark-gray)";
-    }
-  })
+  const [location, setLocation] = React.useState(useLocation().pathname.slice(0,1));
 
   return (
     <nav className="mwi-header">

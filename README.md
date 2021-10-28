@@ -1,3 +1,10 @@
+# Please note:
+
+In order to spin up the backend of the project, you will need to setup up your .env file to configure database settings; migrate the tables, and navigate to \backend\laravel before running:
+
+### `php artisan serve`
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

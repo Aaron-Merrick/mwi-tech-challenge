@@ -8,17 +8,21 @@ import logo from '../assets/img/logo.png';
 import '../styles/header.css';
 
 const MwiHeader: React.FC = () => {
-  const [location, setLocation] = React.useState(useLocation().pathname.slice(0,1));
+  let route = '';
+  const location = useLocation().pathname;
+
+  location === '/' ? route = 'contact' : route = '/';
 
   return (
     <nav className="mwi-header">
-      <img src={logo} alt="logo" />
-      <Link to={location}>
+      <Link to="/">
+        <img src={logo} alt="logo" />
+      </Link>
+      <Link to={route}>
         <button
           className="contact-link"
-          onClick={ () => location === '/' ? setLocation('contact') : setLocation('/') }
         >
-          { location === '/' ? 'home' : location }
+          { route === '/' ? 'home' : 'contact' }
         </button>
       </Link>
     </nav>

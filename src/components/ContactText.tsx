@@ -1,13 +1,33 @@
 import * as React from 'react';
+import { textApi } from '../http';
 
 import '../styles/contact-text.css';
 
+interface apiData {
+    title: string,
+    content: string
+}
+
+let ad: apiData;
+
 const ContactText: React.FC = () => {
+
+    const [text, setText] = React.useState(ad);
+
+    React.useEffect (() =>{
+        textApi.get('/text-content')
+        .then(res => {
+            setText({title: [...res.data][0].title, content: [...res.data][0].content})
+        }).catch((err) => {
+            console.log(err);
+        })
+    }, []);
+
     return (
         <div className="contact-text">
             <h1><span className="gilded">Heading</span> One</h1>
             <div className="text-wrapper">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies, orci sed ullamcorper molestie, elit est bibendum risus, sit amet mollis tellus massa ut augue. Proin vehicula tempus dolor, nec mollis nibh. Quisque gravida condimentum nulla quis dictum. Cras blandit purus leo, eget gravida arcu hendrerit ac. Vivamus tempus commodo urna vel pharetra. Ut blandit, nunc et sagittis tempus, justo leo egestas neque, eu sagittis purus arcu eget tortor.</p>
+                <p>{ text === undefined ? null : text.content }</p>
             </div>
         </div>
     )

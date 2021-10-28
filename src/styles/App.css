@@ -36,6 +36,7 @@ button:hover {
   margin: 0 auto;
 }
 
+
 .page-content {
   padding: 173px 0 0 0;
   min-height: calc(100vh - 173px);
@@ -64,4 +65,31 @@ h2 {
   background-size: cover;
   min-height: 100vh;
   overflow: hidden;
+}
+
+@media (max-width: 1080px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .black-background {
+    min-height: fit-content;
+    padding-top: 85px;
+  }
+  
+  .white-background {
+    min-height: fit-content;
+    padding: 2.5em 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .page-content {
+    padding-top: 7em;
+  }
+}
+
+@media (max-width: 500px) {
+  .page-container {
+    width: 100%;
+  }
 }

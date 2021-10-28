@@ -3,6 +3,7 @@
     width: 90%;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
   
     padding: 5em 0;
 
@@ -19,4 +20,15 @@
     font-size: 1.8em;
     font-weight: bold;
     text-align: right;
+  }
+
+  @media (max-width: 600px) {
+    .black-background > .page-container > .mwi-header {
+      position: relative;
+      padding: 0;
+    }
+
+    .mwi-header > img {
+      width: 60%;
+    }
   }

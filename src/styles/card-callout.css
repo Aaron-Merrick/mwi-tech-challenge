@@ -19,9 +19,11 @@
     height: 11em;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .card-text-container {
+    width: 75%;
     margin: auto 0;
     text-align: left;
 }
@@ -49,11 +51,6 @@
 
 @media (max-width: 1200px) {
     .card-callout {
-    background-color: white;
-    border-radius: 3px;
-
-    display: flex;
-    align-items: center;
     max-width: calc(50% - 8em);
 
     margin: 1.5em;
@@ -66,18 +63,7 @@
 
 @media (max-width: 800px) {
     .card-callout {
-    background-color: white;
-    border-radius: 3px;
-
-    display: flex;
-    align-items: center;
-    max-width: 90%;
-    width: 100%;
-
-    margin: 1.5em auto;
-    padding: 2.5em;
-
-    /* fix this later */
-    min-height: 30em;
+        max-width: 96%;
+        margin: .5em 2%;
     }
 }

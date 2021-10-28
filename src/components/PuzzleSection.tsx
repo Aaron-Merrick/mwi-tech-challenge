@@ -32,6 +32,7 @@ class PuzzleSection extends React.Component<myProps, myState> {
     }
 
     showResults = () => {
+        this.state.noDupes.length === 0 ? this.curate() : alert('Already sorted!');
         document.getElementById("result-list")?.scrollIntoView({behavior: "smooth"});
     }
     
@@ -51,7 +52,7 @@ class PuzzleSection extends React.Component<myProps, myState> {
         return (
             <div className="puzzle-section">
                 <h1><span className="gilded">Heading</span> One</h1>
-                <p>Lorem ipsum dolor sit <button className="puzzle-button" onClick={this.state.noDupes.length === 0 ? this.curate : this.showResults }>amet,</button> consectetur adipiscing elit. Nulla ultricies, orci sed ullamcorper molestie, elit est bibendum risus, sit amet mollis tellus massa ut augue. Proin vehicula tempus dolor, nec mollis nibh. Quisque gravida condimentum nulla quis dictum. Cras blandit purus leo, eget gravida arcu hendrerit ac. Vivamus tempus commodo urna vel pharetra. Ut blandit, nunc et sagittis tempus, justo leo egestas neque, eu sagittis purus arcu eget tortor.</p>
+                <p>Remove the duplicates in 2 Javascript objects and output the list of distinct names in an unordered list when <button className="puzzle-button" onClick={ this.showResults }>this link</button> is clicked. If the operation has been completed already notify the user that this has already been done.</p>
                 {
                     this.state.noDupes.length > 0 ? <this.ResultList></this.ResultList> : null
                 }

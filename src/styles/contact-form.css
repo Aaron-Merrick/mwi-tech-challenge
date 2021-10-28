@@ -48,3 +48,9 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.5em;
 }
+
+@media (max-width: 500px) {
+    .form-row {
+        flex-direction: column;
+    }
+}

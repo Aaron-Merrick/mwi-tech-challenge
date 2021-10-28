@@ -1,6 +1,6 @@
 .mwi-header {
     display: flex;
-    width: 90%;
+    width: 95%;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
@@ -9,6 +9,7 @@
 
     position: absolute;
     top: 0;
+    left: 2.5vw;
   }
   
   .contact-link {
@@ -22,13 +23,20 @@
     text-align: right;
   }
 
+  @media (min-width: 1440px) {
+    .mwi-header {
+      left: calc((100% - 1250px)/2);
+      width: 100%;
+      max-width: 1250px;
+    }
+  }
+
   @media (max-width: 600px) {
-    .black-background > .page-container > .mwi-header {
+    .mwi-header {
       position: relative;
-      padding: 0;
     }
 
-    .mwi-header > img {
+    .mwi-header > a > img {
       width: 60%;
     }
   }

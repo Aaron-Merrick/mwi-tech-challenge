@@ -1,8 +1,19 @@
 # Please note:
 
-In order to spin up the backend of the project, you will need to setup up your .env file to configure database settings; migrate the tables, and navigate to \backend\laravel before running:
+In order to spin up the backend of the project, you will need to setup up your .env file to configure database settings; navigate to \backend\laravel; migrate the tables;
+
+### `php artisan migrate`
+
+and seed the database
+
+### `php artisan db:seed`
+
+before running:
 
 ### `php artisan serve`
+
+## The remainder of this README.md will be boilerplate.
+
 
 
 # Getting Started with Create React App

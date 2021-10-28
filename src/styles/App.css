@@ -32,10 +32,9 @@ button:hover {
 }
 
 .page-container {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
-
 
 .page-content {
   padding: 173px 0 0 0;
@@ -52,10 +51,10 @@ h2 {
 
 .contact-container {
   display: flex;
+  height: 100%;
 }
 
 .contact-content {
-  padding: 173px 0 0 0;
   min-height: calc(100vh);
   flex: 1 1 0;
 }
@@ -67,13 +66,19 @@ h2 {
   overflow: hidden;
 }
 
+@media (min-width: 1440px) {
+  .page-container {
+    width: 100%;
+    max-width: 1250px;
+  }
+}
+
 @media (max-width: 1080px) {
   .contact-container {
     flex-direction: column;
   }
   .black-background {
     min-height: fit-content;
-    padding-top: 85px;
   }
   
   .white-background {
@@ -82,13 +87,13 @@ h2 {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .page-content {
-    padding-top: 7em;
+    padding-top: 0;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .page-container {
     width: 100%;
   }

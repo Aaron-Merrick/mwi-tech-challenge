@@ -31,14 +31,14 @@ const App: React.FC = () => {
             <Route path="/contact">
               <div className="contact-container">
                 <div className="black-background contact-content">
+                  <div className="page-container">
+                    <MwiHeader></MwiHeader>
+                  </div>
                   <ContactText></ContactText>
                 </div>
                 <div className="white-background contact-content">
                   <ContactForm></ContactForm>
                 </div>
-              </div>
-              <div className="page-container">
-                <MwiHeader></MwiHeader>
               </div>
             </Route>
           </Switch>

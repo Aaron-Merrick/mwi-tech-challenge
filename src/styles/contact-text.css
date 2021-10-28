@@ -1,9 +1,24 @@
 .contact-text {
     flex: 1 1 0;
-    margin: 12em auto; /*hard coded; off-center*/
+    margin-left: auto;
+    margin-right: auto;
     width: 90%;
+    margin-top: 20em;
+    margin-bottom: 10em;
 }
 
 .text-wrapper {
     margin: auto 5em 0 auto;
+}
+
+@media (min-width: 1080px) {
+    .contact-text {
+        margin-top: calc((100vh - 178px - 90px)/2);
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-text {
+        margin-top: 0;
+    }
 }

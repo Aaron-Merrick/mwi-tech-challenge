@@ -1,6 +1,5 @@
 .contact-form {
     flex: 1 1 0;
-    margin: auto 0;
 }
 
 #contact-heading {
@@ -47,6 +46,12 @@
     right: 75px;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5em;
+}
+
+@media (min-width: 1080px) {
+    .contact-form {
+        margin-top: calc((100vh - 178px - 212px)/2)
+    }
 }
 
 @media (max-width: 500px) {

@@ -6,11 +6,11 @@ POST http://localhost:8000/api/form-results HTTP/1.1
  Content-Type: application/json
 
 {
-    "first_name": "Ethan",
+    "first_name": "Levi",
     "last_name": "Zitting",
-    "title": "Jr. Dev",
-    "email": "ethan@mwi.com",
-    "message": "This his my message to the mwi."
+    "title": "Sr. Dev",
+    "email": "levi@mwi.com",
+    "message": "I'm the team lead."
 }
 
 ###

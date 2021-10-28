@@ -10,6 +10,6 @@ class FormResults extends Model
     use HasFactory;
 
     protected $fillable = [
-        'first-name', 'last-name', 'title', 'email', 'message'
+        'first_name', 'last_name', 'title', 'email', 'message'
     ];
 }

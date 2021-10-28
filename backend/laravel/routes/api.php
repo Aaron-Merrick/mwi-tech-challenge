@@ -17,8 +17,6 @@ use App\Http\Controllers\TextContentApiController;
 |
 */
 
-Route::get('/form-results', [FormResultsApiController::class, 'index']);
-
-Route::post('/form-results', [FormResultsApiController::class, 'storeResults']);
+Route::post('/form-results', [FormResultsApiController::class, 'store']);
 
 Route::get('/text-content', [TextContentApiController::class, 'text']);

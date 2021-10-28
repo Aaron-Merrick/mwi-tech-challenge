@@ -35,16 +35,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
-input:required {
-    border: red;
-}
-
-input:invalid:required {
-    border: red;
-}
-
 #message-box {
     display: block;
     min-height: 13.5em;
     resize: none;
+}
+
+#required-text {
+    position: absolute;
+    color: var(--mwi-red);
+    right: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
 }

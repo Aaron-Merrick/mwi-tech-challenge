@@ -13,8 +13,6 @@ interface myState {
     sorted: boolean;
 }
 
-
-
 class PuzzleSection extends React.Component<myProps, myState> {
     public readonly state: myState = {
         noDupes: [],

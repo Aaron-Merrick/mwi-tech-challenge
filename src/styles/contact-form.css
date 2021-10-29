@@ -64,6 +64,13 @@
     }
 }
 
+@media (min-width: 1440px) {
+    .contact-form {
+        margin-right: calc((90%-1250px)/4);
+        margin-left: 40px;
+    }
+}
+
 @media (max-width: 1440px) {
     #required-fname-text {
         right: 390px;

@@ -11,6 +11,16 @@
     margin: auto 5em 0 auto;
 }
 
+@media (min-width: 1440px) {
+    .contact-text {
+        margin-left: calc((100%-1250px)/4);
+    }
+
+    .text-wrapper {
+        margin: auto 20em 0 auto;
+    }
+}
+
 @media (min-width: 1080px) {
     .contact-text {
         margin-top: calc((100vh - 178px - 90px)/2);

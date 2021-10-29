@@ -30,8 +30,8 @@
     color: var(--mwi-mid-gray);
     background-color: var(--mwi-light-gray);
     border: none;
-
     font-family: 'Poppins', sans-serif;
+    position: relative;
 }
 
 #message-box {
@@ -40,12 +40,40 @@
     resize: none;
 }
 
-#required-text {
+#required-fname-text {
+    padding-top: 12px;
     position: absolute;
+    right: 440px;
     color: var(--mwi-red);
-    right: 75px;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5em;
+}
+
+#required-text-right {
+    padding-top: 12px;
+    position: absolute;
+    color: var(--mwi-red);
+    right: 55px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+}
+
+@media (max-width: 1920px) {
+    #required-fname-text {
+        right: 500px;
+    }
+}
+
+@media (max-width: 1440px) {
+    #required-fname-text {
+        right: 390px;
+    }
+}
+
+@media (max-width: 1250px) {
+    #required-fname-text {
+        right: 340px;
+    }
 }
 
 @media (min-width: 1080px) {
@@ -54,8 +82,47 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1080px) {
+    #required-fname-text {
+        right: 560px;
+    }
+    #required-text-right {
+        right: 65px;
+    }
+}
+
+@media (max-width: 1080px) {
+    #required-fname-text {
+        right: 560px;
+    }
+    #required-text-right {
+        right: 65px;
+    }
+}
+
+@media (max-width: 900px) {
+    #required-fname-text {
+        right: 480px;
+    }
+}
+
+@media (max-width: 720px) {
+    #required-fname-text {
+        right: 390px;
+    }
+}
+
+@media (max-width: 600px) {
     .form-row {
         flex-direction: column;
+    }
+
+    #required-fname-text {
+        right: 40px;
+    }
+
+    #required-text-right {
+        right: 40px;
+        padding-top: 85px;
     }
 }
